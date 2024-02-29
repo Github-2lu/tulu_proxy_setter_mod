@@ -4,8 +4,8 @@
 # then please put 'unknown'.
 
 # Maintainer: Sudip Datta <sudipdatta2002@gmail.com>
-pkgname="tulu_proxy_setter"
-pkgver=0.1.alpha
+pkgname="tuluproxysetter"
+pkgver=0.2.alpha
 pkgrel=1
 pkgdesc="Auto Proxy Setter"
 arch=("x86_64")
