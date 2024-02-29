@@ -16,6 +16,10 @@ makedepends=("git")
 source=("$pkgname.tar.gz::$url/releases/download/v$pkgver/$pkgname.tar.gz")
 md5sums=("SKIP")
 
+prepare(){
+	chmod +x $srcdir/usr/bin/tulu_proxy_setter
+}
+
 package() {
 	cp -r $srcdir/* $pkgdir
 }
