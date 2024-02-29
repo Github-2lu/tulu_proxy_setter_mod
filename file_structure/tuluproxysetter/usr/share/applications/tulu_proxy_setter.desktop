@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/usr/bin/tulu_proxy_setter
+Icon=/usr/share/icons/tulu_app_logo.png
+Name=tulu_proxy_setter
+Type=Application

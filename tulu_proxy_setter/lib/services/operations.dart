@@ -33,8 +33,14 @@ Future<Proxy> getInitialProxy() async {
   if (await File(currentProxypath).exists()) {
     var proxyFile = await File(currentProxypath).readAsLines();
     name = proxyFile[0].split("=")[1];
-    host = proxyFile[1].split("=")[1].split(":")[0];
-    port = proxyFile[1].split("=")[1].split(":")[1];
+    // host = proxyFile[1].split("=")[1].split(":");
+    // port = proxyFile[1].split("=")[1].split(":")[1];
+
+    var hostPort = proxyFile[1].split("=")[1];
+    var len = hostPort.split(":").length;
+
+    port = hostPort.split(":")[len - 1];
+    host = hostPort.replaceAll(":$port", "");
 
     for (final line in proxyFile) {
       if (line.contains("no_proxy")) {

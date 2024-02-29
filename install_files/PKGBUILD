@@ -1,0 +1,21 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Sudip Datta <sudipdatta2002@gmail.com>
+pkgname="tulu_proxy_setter"
+pkgver=0.1.alpha
+pkgrel=1
+pkgdesc="Auto Proxy Setter"
+arch=("x86_64")
+url="https://github.com/Github-2lu/tulu_proxy_setter_mod"
+license=("GPL3")
+depends=('gtk3')
+makedepends=("git")
+source=("$pkgname.tar.gz::$url/releases/download/v$pkgver/$pkgname.tar.gz")
+md5sums=("SKIP")
+
+package() {
+	cp -r $srcdir/* $pkgdir
+}
