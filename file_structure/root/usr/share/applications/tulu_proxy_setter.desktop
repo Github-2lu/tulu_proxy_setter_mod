@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/usr/bin/tulu_proxy_setter
+Icon=dialog-scripts
+Name=tulu_proxy_setter
+Type=Application
