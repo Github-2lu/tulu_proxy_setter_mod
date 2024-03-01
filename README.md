@@ -23,7 +23,7 @@ To install package from zst file use second command.
 ## For Debian users
 Download .deb file from release page
 ```bash
-sudo apt install {filename}.deb
+sudo dpkg -i {filename}.deb
 ```
 
 
