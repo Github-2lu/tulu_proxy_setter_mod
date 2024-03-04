@@ -5,7 +5,7 @@
 
 # Maintainer: Sudip Datta <sudipdatta2002@gmail.com>
 pkgname="tuluproxysetter"
-pkgver=0.2.alpha
+pkgver=0.3.alpha
 pkgrel=1
 pkgdesc="Auto Proxy Setter"
 arch=("x86_64")
