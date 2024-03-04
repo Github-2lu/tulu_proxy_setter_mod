@@ -81,8 +81,13 @@ class ProxySetter:
         subprocess.run(f"gsettings set org.gnome.system.proxy.https port {proxy_info[2]}", shell=True, executable="/bin/bash")
         subprocess.run(f"gsettings set org.gnome.system.proxy.ftp host {proxy_info[1]}", shell=True, executable="/bin/bash")
         subprocess.run(f"gsettings set org.gnome.system.proxy.ftp port {proxy_info[2]}", shell=True, executable="/bin/bash")
-        subprocess.run(f"gsettings set org.gnome.system.proxy.socks host {proxy_info[1]}", shell=True, executable="/bin/bash")
-        subprocess.run(f"gsettings set org.gnome.system.proxy.socks port {proxy_info[2]}", shell=True, executable="/bin/bash")
+        ## if socks proxy is set then web whatsapp won't work
+        # subprocess.run(f"gsettings set org.gnome.system.proxy.socks host {proxy_info[1]}", shell=True, executable="/bin/bash")
+        # subprocess.run(f"gsettings set org.gnome.system.proxy.socks port {proxy_info[2]}", shell=True, executable="/bin/bash")
+
+        ## so unsetting the socks proxy
+        subprocess.run("gsettings set org.gnome.system.proxy.socks host ''", shell=True, executable="/bin/bash")
+        subprocess.run("gsettings set org.gnome.system.proxy.socks port 0", shell=True, executable="/bin/bash")
 
         # now set up for no proxy
         gnome_no_proxies = "["
